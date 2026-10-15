@@ -9,6 +9,8 @@ export const languages = [
 export type Language = typeof languages[number]["value"];
 
 const en = {
+  composer: "Composer", composerStyling: "Composer styling", composerHint: "Experimental · Desktop only. Styles the real input and controls. Codex’s effort slider uses Paseo’s available options.",
+  composerOff: "Native composer styling is active.", composerWaiting: "Ready. Open a supported desktop chat to see the styling.", composerActive: "Applied to supported visible composers.", composerUnsupported: "This layout is not supported. The native composer is unchanged.", composerConflict: "Multiple Chat Skins instances share this window. Composer styling is paused to avoid conflicts.",
   credit: "Created by serra",
   intro: "Choose how supported chat messages look. Your model, permissions and conversation stay unchanged.",
   language: "Settings language", languageHint: "Applies to this page and its preview, not your chats or Paseo’s interface.",
@@ -32,6 +34,8 @@ const en = {
 };
 export type SettingsCopy = { [K in keyof typeof en]: string };
 const zh: SettingsCopy = {
+  composer: "输入框", composerStyling: "输入框样式增强", composerHint: "实验性 · 仅桌面端。调整真实输入框与控件；Codex 强度滑杆对应 Paseo 的可用选项。",
+  composerOff: "当前使用原生输入框样式。", composerWaiting: "已准备好，打开支持的桌面聊天即可查看。", composerActive: "已应用到支持的可见输入框。", composerUnsupported: "当前布局不支持，保持原生输入框。", composerConflict: "当前窗口有多个 Chat Skins 实例，暂不应用输入框样式以避免冲突。",
   credit: "由 serra 创作",
   intro: "选择支持的聊天消息如何呈现，不改变模型、权限或会话内容。",
   language: "设置页面语言", languageHint: "仅影响本页和预览，不翻译聊天内容或 Paseo 界面。",
@@ -54,6 +58,8 @@ const zh: SettingsCopy = {
   sampleTool: "示例命令 · 未实际执行", sampleCommand: "运行命令", sampleOutput: "npm run typecheck\n\n示例输出：类型检查完成。",
 };
 const hi: SettingsCopy = {
+  composer: "संदेश इनपुट", composerStyling: "इनपुट की शैली", composerHint: "प्रयोगात्मक · केवल डेस्कटॉप। असली इनपुट और नियंत्रण की शैली बदलता है। Codex का स्तर स्लाइडर Paseo के उपलब्ध विकल्पों का उपयोग करता है।",
+  composerOff: "मूल इनपुट शैली चालू है।", composerWaiting: "तैयार है। शैली देखने के लिए समर्थित डेस्कटॉप चैट खोलें।", composerActive: "समर्थित दिखाई देने वाले इनपुट पर लागू है।", composerUnsupported: "यह लेआउट समर्थित नहीं है। मूल इनपुट नहीं बदला गया।", composerConflict: "इस विंडो में Chat Skins के कई इंस्टेंस हैं। टकराव से बचने के लिए इनपुट शैली रोकी गई है।",
   credit: "serra द्वारा निर्मित",
   intro: "समर्थित चैट संदेशों का रूप चुनें। आपका मॉडल, अनुमतियाँ और बातचीत नहीं बदलेंगे।",
   language: "सेटिंग्स की भाषा", languageHint: "केवल इस पेज और पूर्वावलोकन पर लागू होती है, आपकी चैट या Paseo के इंटरफ़ेस पर नहीं।",

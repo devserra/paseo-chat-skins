@@ -10,6 +10,7 @@ import type { Preferences } from "../../shared/settings";
 import { copyFor, languages, skinHint, skinOptions } from "../i18n/settings";
 import { ChatRow } from "../timeline/row";
 import { tokens } from "../skins/tokens";
+import type { ComposerStyling } from "../web";
 import type { SkinRuntime } from "../runtime";
 
 type DisclosureProps = {
@@ -28,10 +29,12 @@ function Disclosure({ title, openTitle, open, onPress, theme, children }: Disclo
   </View>;
 }
 
-export function createSettingsScreen(runtime: SkinRuntime) {
-  return function SettingsScreen({ theme, layout }: PluginSurfaceProps) {
+export function createSettingsScreen(runtime: SkinRuntime, composer: ComposerStyling) {
+  return function SettingsScreen({ theme, layout, host }: PluginSurfaceProps) {
     const settings = useSettings(definition);
+    useEffect(() => composer.bindHost(host.id), [host.id]);
     const applied = useSyncExternalStore(runtime.subscribe, runtime.getSnapshot, runtime.getSnapshot);
+    const composerStatus = useSyncExternalStore(composer.subscribe, composer.getSnapshot, composer.getSnapshot);
     const [busy, setBusy] = useState(false);
     const pending = useRef(false);
     const [previewOpen, setPreviewOpen] = useState(false);
@@ -105,6 +108,12 @@ export function createSettingsScreen(runtime: SkinRuntime) {
               <ChatRow row={{ kind: "tool", name: c.sampleTool, label: c.sampleCommand, detail: c.sampleOutput, status: "completed", error: null }} preferences={p} t={t} language={language} />
             </View>
           </Disclosure>}
+      </SettingsSection>
+      <SettingsSection title={c.composer}>
+        <SettingsCard>
+          <SettingsSwitch label={c.composerStyling} hint={c.composerHint} value={p.composerStyling} disabled={disabled || p.skin === "native"} onValueChange={(composerStyling) => { void save({ composerStyling }); }} />
+        </SettingsCard>
+        {p.composerStyling && <Text accessibilityLiveRegion="polite" style={{ ...textStyle, marginTop: 8 }}>{({ off: c.composerOff, waiting: c.composerWaiting, active: c.composerActive, unsupported: c.composerUnsupported, conflict: c.composerConflict })[composerStatus]}</Text>}
       </SettingsSection>
       <SettingsSection title={c.reading}>
         {p.skin === "native" && <Text style={textStyle}>{c.readingHint}</Text>}

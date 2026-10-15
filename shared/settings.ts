@@ -3,6 +3,7 @@ import { z } from "zod";
 
 export const preferencesSchema = z.object({
   language: z.enum(["en", "zh-CN", "hi"]).default("en"),
+  composerStyling: z.boolean().default(false),
   skin: z.enum(["native", "codex", "claude-code"]).default("native"),
   fontSize: z.enum(["small", "reference", "large"]).default("reference"),
   density: z.enum(["comfortable", "compact"]).default("comfortable"),
@@ -14,14 +15,14 @@ export const defaultPreferences: Preferences = preferencesSchema.parse({});
 export const preferences = defineSettings({
   id: "appearance",
   scope: "host",
-  version: 2,
+  version: 3,
   schema: preferencesSchema,
   migrate: migratePreferences,
 });
 
-/** Add page language without resetting an existing skin or display preferences. */
+/** Add missing language and opt-in composer styling without resetting existing preferences. */
 export function migratePreferences(values: unknown, fromVersion: number): Preferences {
-  if (fromVersion !== 1) throw new Error(`Unsupported settings version: ${fromVersion}`);
+  if (fromVersion !== 1 && fromVersion !== 2) throw new Error(`Unsupported settings version: ${fromVersion}`);
   return preferencesSchema.parse(values);
 }
 
