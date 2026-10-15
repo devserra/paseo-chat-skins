@@ -1,7 +1,11 @@
 import { z } from "zod";
-import type { AgentTimelineItem } from "@getpaseo/protocol/agent-types";
+import type { PluginTimelineTransformerContribution } from "@getpaseo/plugin/client";
 import type { PluginTimelineTransformResult } from "@getpaseo/plugin";
 import { canRenderText } from "./markdown.ts";
+
+// Resolve types through the host-provided SDK, not a development-only protocol package.
+type TimelineTransformInput = Parameters<PluginTimelineTransformerContribution["transform"]>[0];
+type AgentTimelineItem = TimelineTransformInput["item"];
 
 export const rowSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.enum(["user", "assistant", "reasoning"]), text: z.string(), phase: z.enum(["streaming", "complete"]) }),
