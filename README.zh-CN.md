@@ -1,6 +1,6 @@
 # Chat Skins
 
-[English](./README.md) | **简体中文**
+[English (default)](./README.md) | **简体中文**
 
 以像素级还原的 Codex 和 Claude Code 样式焕新 Paseo 聊天界面，一键切换聊天皮肤。
 

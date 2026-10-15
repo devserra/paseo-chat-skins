@@ -1,6 +1,6 @@
 # Chat Skins
 
-**English** | [简体中文](./README.zh-CN.md)
+**English (default)** | [简体中文](./README.zh-CN.md)
 
 Transform Paseo's chat interface with pixel-faithful Codex and Claude Code styles. Switch between chat skins with a single click.
 
@@ -15,7 +15,7 @@ Transform Paseo's chat interface with pixel-faithful Codex and Claude Code style
 - Font size, density, default tool/reasoning expansion, and appearance reset (preserves the settings language). Failed shell calls always expose their error details.
 - Real host-managed settings with revision checks. Saves update connected clients, survive reloads, and do not change providers, models, permissions, or message history.
 
-The settings page supports **English, 简体中文, and हिन्दी (Hindi)**. Choose **Settings language** at the top; the page and sample preview update together. The menu/Command Center label always stays **Chat Skins Settings**. Language is host-scoped, defaults to English, and does not translate chats or change Paseo’s own language. The footer links **Created by serra** to [serra.dev](https://serra.dev).
+The settings page supports **English, Simplified Chinese, and Hindi**. Choose **Settings language** at the top; the page and sample preview update together. The menu/Command Center label always stays **Chat Skins Settings**. Language is host-scoped, defaults to English, and does not translate chats or change Paseo’s own language. The footer links **Created by serra** to [serra.dev](https://serra.dev).
 
 ## Boundaries and safe fallback
 
