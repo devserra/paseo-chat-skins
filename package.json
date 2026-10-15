@@ -2,7 +2,7 @@
   "name": "paseo-chat-skins",
   "version": "0.1.0",
   "private": true,
-  "description": "Transform Paseo's chat interface with pixel-faithful Codex and Claude Code styles. Switch between chat skins with a single click.",
+  "description": "Codex- and Claude Code-inspired message styles and optional desktop composer customization for Paseo.",
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",

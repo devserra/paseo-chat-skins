@@ -1,19 +1,13 @@
 # Chat Skins
 
-Bring familiar Codex and Claude Code chat styles to Paseo, with customizable message appearance, code blocks, tool/reasoning details and reading preferences.
+Chat Skins adds Codex- and Claude Code-inspired message styles to Paseo, with configurable text size, spacing and tool/reasoning details. It changes presentation without rewriting conversations or changing the agent selected for a chat.
 
-## Install and use
+Paseo 0.11.2 or later is required on both the host and connected app. Open **Settings → Plugins → Chat Skins → ⋯ → Chat Skins Settings** and choose a style. New installations use Paseo native rendering. Settings and sample previews support English, Simplified Chinese and Hindi.
 
-```bash
-paseo plugin add devserra/chat-skins
-```
+Supported messages include common Markdown and monospaced code blocks with copy actions. Supported shell commands and reasoning can be expanded; failed commands keep their error details visible. Rich attachments, unsupported content and specialized tools retain native rendering. Another message-rendering plugin may take precedence.
 
-Open **Settings → Plugins → Chat Skins → ⋯ → Chat Skins Settings**, then select **Codex** or **Claude Code**. New installations default to **Paseo native**. Changes save automatically and are shared by clients connected to the same host.
+**Composer styling** is an optional, default-off desktop enhancement. Codex uses a rounded input and a compact effort slider with Fast control when actual native options are available. Claude Code uses a compact input with a combined model/Effort/Fast menu. Context details open deliberately rather than on hover. Controls retain their real provider behavior; unavailable or unverified features stay native. The composer adaptation targets the Paseo 0.11.2 desktop/web layout, requires a wide pane and fine pointer, and can fall back after host markup changes. It does not replace the sidebar or window layout. Light-mode macOS interfaces are visual references, not a promise of full pixel parity.
 
-Enable **Composer styling** separately for the optional desktop input adaptation. Codex offers a rounded input and a guarded effort slider with Fast control. Claude Code offers a compact input and a combined model/Effort/Fast menu. Context details open deliberately rather than on hover. These controls invoke real native behavior; selecting a skin does not change the underlying agent, model or permissions.
+Appearance preferences are stored on the Paseo host and shared by its connected clients. The plugin reads supported chat content and public agent feature state to render the selected appearance. It does not send conversation data to external services. Choosing a skin does not change providers, models or permissions; explicitly using native configuration controls still applies the corresponding changes.
 
-Settings and previews support **English, Simplified Chinese and Hindi**. Paseo 0.11.2 or later is required on both the host and connected app. Experimental composer styling targets the 0.11.2 desktop/web layout and falls back on unsupported sizes or markup. Sidebar/window replacement and full pixel parity are not included. Unsupported rich content and tools remain native; another message-rendering plugin may take precedence.
-
-See the [English guide](./README.md) or [中文使用指南](./README.zh-CN.md) for setup, settings, screenshots, updates and limitations. Marketplace installations use the reviewed registry revision, which may lag behind this repository.
-
-Created by [serra](https://serra.dev). Chat Skins does not send conversation data to external services.
+[English usage guide](./README.md) · [中文使用指南](./README.zh-CN.md) · [Created by serra](https://serra.dev)
