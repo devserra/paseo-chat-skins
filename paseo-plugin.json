@@ -1,0 +1,8 @@
+{
+  "id": "paseo-chat-skins",
+  "name": "Chat Skins",
+  "description": "Transform Paseo's chat interface with pixel-faithful Codex and Claude Code styles. Switch between chat skins with a single click.",
+  "requirements": {
+    "paseo": ">=0.11.2"
+  }
+}

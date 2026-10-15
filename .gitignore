@@ -1,0 +1,80 @@
+# Dependencies and package-manager caches (keep package-lock.json tracked)
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+
+# Build output, caches and package archives
+dist/
+build/
+out/
+.cache/
+.turbo/
+*.tsbuildinfo
+*.tgz
+
+# Local-only tests, fixtures, snapshots and test tooling
+test/
+tests/
+__tests__/
+__mocks__/
+__fixtures__/
+__snapshots__/
+*.test.*
+*.spec.*
+vitest.config.*
+jest.config.*
+playwright.config.*
+coverage/
+.nyc_output/
+playwright-report/
+playwright/.cache/
+test-results/
+
+# Internal planning, QA and machine-specific evidence
+/PRODUCT.md
+/DESIGN.md
+/design-qa.md
+/docs/verification.md
+/docs/settings-update-verification.md
+/client/**/README.md
+/artifacts/
+/screenshots/
+/recordings/
+/.paseo/
+/.orca/
+/.codex/
+/.agents/
+/.claude/
+/.impeccable/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.npmrc
+*.local
+*.local.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Editors, temporary files and logs
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*~
+*.log
+
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini

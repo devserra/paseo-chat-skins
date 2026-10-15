@@ -1,0 +1,33 @@
+{
+  "name": "paseo-chat-skins",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Transform Paseo's chat interface with pixel-faithful Codex and Claude Code styles. Switch between chat skins with a single click.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck"
+  },
+  "files": [
+    "paseo-plugin.json",
+    "OVERVIEW.md",
+    "README.md",
+    "README.zh-CN.md",
+    "index.client.tsx",
+    "index.server.ts",
+    "client/**/*.ts",
+    "client/**/*.tsx",
+    "shared/**/*.ts",
+    "docs/architecture.md"
+  ],
+  "devDependencies": {
+    "@getpaseo/client": "0.11.2",
+    "@getpaseo/plugin": "0.11.2",
+    "@getpaseo/protocol": "0.11.2",
+    "@types/react": "~19.1.0",
+    "react": "~19.1.0",
+    "react-native": "0.81.5",
+    "typescript": "5.9.3",
+    "zod": "^4.4.3"
+  }
+}
