@@ -4,5 +4,10 @@
   "description": "Transform Paseo's chat interface with pixel-faithful Codex and Claude Code styles. Switch between chat skins with a single click.",
   "requirements": {
     "paseo": ">=0.11.2"
-  }
+  },
+  "media": [
+    "assets/screenshots/codex.png",
+    "assets/screenshots/claude-code.png",
+    "assets/screenshots/settings.png"
+  ]
 }

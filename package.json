@@ -18,7 +18,8 @@
     "client/**/*.ts",
     "client/**/*.tsx",
     "shared/**/*.ts",
-    "docs/architecture.md"
+    "docs/architecture.md",
+    "assets/screenshots/"
   ],
   "devDependencies": {
     "@getpaseo/client": "0.11.2",
